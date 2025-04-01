@@ -12,9 +12,9 @@ The main scripts are:
 
 The helper files are:
 
-  * `build_system_from_group.g`: a GAP function that computes $M_H$, given the group $H$.
-  * `build_sparse_F2_system_from_group.g`: a GAP function that computes $M_H$, given the group $H$, but this time using the [`SparseMatrix`](https://docs.gap-system.org/pkg/gauss/doc/chap3.html) data structure from the GAP package [`gauss`](https://homalg-project.github.io/pkg/Gauss). This script is more suitable when $H$ it large, but it requires the extra package `gauss` and the output of this function is not compatible with `solution_group.g`.
-  * `solution_group.g`: a GAP function that computes the solution group $\Gamma(M,b)$ of the linear system $Mx = b$ over $\mathbb{F}_2$.
+  * `build_system_from_group.g`: a GAP function that takes as input a finite group $H$ and returns as output the matrix $M_H$ (as defined in [DSR23+, Definition 6.1]).
+  * `build_sparse_F2_system_from_group.g`: a GAP function that takes as input a finite group $H$ and returns as output the matrix $M_H$, but this time using the [`SparseMatrix`](https://docs.gap-system.org/pkg/gauss/doc/chap3.html) data structure from the GAP package [`gauss`](https://homalg-project.github.io/pkg/Gauss). This script is more suitable when $H$ is large, but it requires the extra package `gauss` and the output of this function is not compatible with `solution_group.g`.
+  * `solution_group.g`: a GAP function that takes as input a matrix $M \in \mathbb{F}_2^{m \times n}$ and a vector $b \in \mathbb{F}_2^m$ and returns as output the solution group $\Gamma(M,b)$ of the linear system $Mx = b$ (as a finitely presented group).
 
 
 ## References
